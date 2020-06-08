@@ -1,6 +1,8 @@
 from django.shortcuts import render
 import random
+
 # Create your views here.
+
 def home(request):
     return render(request, 'home.html')
 
@@ -10,15 +12,17 @@ def about(request):
 def result(request):
     number_list = []
 
-    for i in range(1,7):
+    for i in range(1,8):
         num = request.GET['number%d' % i]
         number_list.append(num)
 
 
     random_list = []
+
     arr = [i for i in range(1, 46)]
+
     random.shuffle(arr)
-    random_list = arr[:6]
+    random_list = arr[:7]
     random_list.sort()
 
     count = 0
