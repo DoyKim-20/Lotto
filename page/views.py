@@ -20,7 +20,7 @@ def result(request):
     random_list=list()
 
     for j in range(7):
-        number=random.list(1,47)
+        number=random.randrange(1,47)
         while number in random_list :
             number=random.randrange(1,47)
         random_list.append(number)
